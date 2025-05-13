@@ -1,0 +1,458 @@
+body {
+    background: linear-gradient(to right, #2e2e2e, #000000); 
+    color: white; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-graph {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+.graph-1 { animation-delay: 0.1s; }
+.graph-2 { animation-delay: 1.5s; }
+.graph-3 { animation-delay: 3s; }
+.graph-4 { animation-delay: 4.5s; }
+.graph-5 { animation-delay: 6s; }
+.graph-6 { animation-delay: 7.2s; }
+.scroll-graph img {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.graph-1 img {
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: -100px;
+}
+ 
+h1, h2, h3, h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.top-left {
+    left: -200px;
+    top: 20px;  
+}
+
+.top-right {
+    right: 10px;
+    top: 100px; 
+}
+
+h2 {
+    font-size: 36px; 
+    margin-top: 250px; 
+    margin-left: 20px; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+    font-weight: bold;
+}
+
+.box-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-left: 10px; 
+    margin-top: 200px; 
+}
+
+.square {
+    position: absolute;  
+    width: 600px; 
+    height: 425px; 
+    background-color: gray;
+    border: 1px solid red;
+    overflow: hidden; 
+    flex-shrink: 0; 
+    border-bottom-left-radius: 70px;
+}
+
+.top-right {
+    right: 10px;
+    top: 100px; 
+}
+
+.square-video {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.gradient-box {
+    width: 250px; 
+    height: 125px; 
+    background: linear-gradient(to right, #2c2625, #201d1b); 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+.gradient-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 50px; 
+    margin-left: 10px;
+}
+.gradient-box img {
+    max-width: 40%;
+    height: auto;         
+    border-radius: 8px;   
+    display: block;       
+}
+
+.apple-buttons { 
+    display: flex; 
+    flex-direction: column; /* Stack buttons vertically */ 
+    justify-content: flex-start; /* Align buttons to the top */ 
+    align-items: flex-start; /* Align buttons to the left */ 
+    gap: 20px; 
+    margin-top: -500px; /* Move it even higher */ 
+    margin-left: 300px; 
+} 
+.apple-btn { 
+    display: inline-block; 
+    padding: 6px 12px;  
+    background-color: #ffffff; 
+    color: black; 
+    font-weight: bold; 
+    border-radius: 50px;  
+    text-decoration: none; 
+    font-size: 14px; 
+    border: 2px solid #ccc; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); 
+    width: 120px;  
+    height: 35px;  
+    text-align: center; 
+    line-height: 35px; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+} 
+.apple-btn:hover { 
+    background-color: #ff0000; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glowing effect */ 
+} 
+
+.hamburger-menu {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 100px; /* Slightly bigger width */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 12px; /* Added rounded corners */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 10px; /* Slightly increased padding */
+    font-size: 13px;  /* Slightly increased font size */
+    text-decoration: none;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: red;
+    color: white;
+}
+
+.dropdown-content a:active {
+    background-color: red;
+    color: white;
+}
+
+.hamburger-menu:hover .dropdown-content {
+    display: block;
+}
+
+.custom-gradient-box {
+    position: absolute;
+    top: 200px; 
+    left: 15px; 
+    width: 450px; 
+    height: 250px; 
+    background: linear-gradient(to right, #2c2625, #201d1b); 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: -1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+.h4-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: row; 
+    gap: 30px; 
+    color: white;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+.h4-container h4 {
+    margin: 0; 
+}
+
+.h4-container .text-button {
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.h4-container .text-button:hover {
+    text-decoration: none;
+    border-bottom: 2px solid red;
+}
+
+body.about-us .about-us {     
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+                 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+    margin-top: 190px; 
+    line-height: 1.6;   
+    font-size: 16px;
+    color: white;       
+    max-width: 1000px;   
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.world-symbol {
+    font-size: 36px;
+    color: black;                
+    background-color: white;     
+    border-radius: 50%;          
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;             
+    bottom: 150px;              
+    left: 30%;                   
+    transform: translateX(-50%); 
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols;
+}
+
+body.about-us .footer-text {
+    position: fixed;
+    bottom: 120px; 
+    left: 53%;    
+    transform: translateX(-50%);
+    max-width: 500px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
+                 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+}
+
+body.about-us .white-line {
+    border: none;
+    height: 1px;
+    background-color: white;
+    width: 60%;      
+    margin: 40px auto;   
+}
+
+body.about-us .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px; 
+    text-decoration: none;
+    position: fixed;
+    bottom: 60px;
+    left: 7%; 
+    transform: translateX(-50%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
+                 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.about-us .back-button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+
+body.statistics {
+    background: linear-gradient(to right, #2e2e2e, #000000); 
+    padding-bottom: 1000px; 
+}
+
+
+.statistics-img,
+.graph-img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 200px auto 0; 
+}
+.graph-img {
+    margin: 600px auto 0;
+}
+
+.statistics-img2, .graph-img2, .graph-img3 {
+    width: 900px;
+    height: 350px;
+    border-radius: 60px;
+}
+.image-container .statistics-img2,
+.image-container .graph-img2,
+.image-container .graph-img3 {
+    margin-top: 500px;
+    margin-left: 90px;
+}
+
+body.statistics .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+                 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+body.statistics .back-button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+
+.down-arrow {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+
+
+body.Trending {
+  background: linear-gradient(to right, #1f1f1f, #3a3a3a); 
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
+               "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+  padding: 80px;
+}
+
+body.Trending .video-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 500px;
+}
+
+body.Trending .video-gallery video {
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 200px;
+}
+  
+.video-gallery video {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+body.statistics h2 { 
+    display: block; 
+    margin-top: 200px; 
+    margin-bottom: 400px; 
+    text-align: left; 
+    font-size: 24px;    
+    color: #ffffff; 
+    width: 100%; 
+    max-width: 1400px; 
+    margin-left: 100px;  
+    margin-right: auto; 
+} 
+    
+body.statistics p { 
+    width: 100%; 
+    max-width: 500px; 
+    margin-left: -1400px; 
+    margin-right: auto; 
+    text-align: left; 
+} 
